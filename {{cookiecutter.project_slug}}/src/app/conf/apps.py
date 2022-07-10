@@ -1,9 +1,8 @@
-# Application definition
-
-APPS = [
+LOCAL_APPS = [
     'app',
     'a12n',
     'users',
+    'examples',
 ]
 
 THIRD_PARTY_APPS = [
@@ -14,7 +13,6 @@ THIRD_PARTY_APPS = [
     'rest_framework_jwt.blacklist',
     'django_filters',
     'axes',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -23,4 +21,4 @@ THIRD_PARTY_APPS = [
     'django.contrib.staticfiles',
 ]
 
-INSTALLED_APPS = APPS + THIRD_PARTY_APPS
+INSTALLED_APPS = LOCAL_APPS + THIRD_PARTY_APPS

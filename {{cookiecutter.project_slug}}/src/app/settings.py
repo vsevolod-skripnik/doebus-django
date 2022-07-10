@@ -15,13 +15,13 @@ CI = env('CI', cast=bool, default=False)
 
 include(
     'conf/api.py',
+    'conf/apps.py',
     'conf/auth.py',
     'conf/boilerplate.py',
     'conf/db.py',
     'conf/healthchecks.py',
     'conf/http.py',
     'conf/i18n.py',
-    'conf/installed_apps.py',
     'conf/media.py',
     'conf/middleware.py',
     'conf/storage.py',

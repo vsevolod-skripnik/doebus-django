@@ -2,7 +2,7 @@ install:
 	poetry install
 
 collectstatic:
-	cd src/ && ./manage.py collectstatic
+	cd src/ && ./manage.py collectstatic --no-input
 
 migrate:
 	cd src/ && ./manage.py migrate
