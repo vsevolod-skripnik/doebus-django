@@ -15,4 +15,6 @@ I use this repository as a starter modern API Django template in my projects. Th
 
 2. [Install Cookiecutter.](https://cookiecutter.readthedocs.io/en/stable/installation.html)
 
-3. Run the following command: `cookiecutter gh:vsevolod-skripnik/doebus-django`
+3. Open up a background terminal and run `docker-compose up postgres`
+
+4. Run the following command: `cookiecutter gh:vsevolod-skripnik/doebus-django`
