@@ -30,7 +30,7 @@ You definetely should consider this steps after installation:
 
 ```
 $ pip install --upgrade cookiecutter
-$ cookiecutter gh:f213/django
+$ cookiecutter gh:vsevolod-skripnik/doebus-django
 ```
 
 ## FAQ
