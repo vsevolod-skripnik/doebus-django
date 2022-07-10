@@ -1,22 +1,19 @@
-install-dev-deps: dev-deps
-	pip-sync requirements.txt dev-requirements.txt
+install:
+	poetry install
 
-install-deps: deps
-	pip-sync requirements.txt
+collectstatic:
+	cd src/ && ./manage.py collectstatic
 
-deps:
-	pip-compile requirements.in
-
-dev-deps: deps
-	pip-compile dev-requirements.in
+migrate:
+	cd src/ && ./manage.py migrate
 
 lint:
 	dotenv-linter src/app/.env.ci
 	flake8 src
 	cd src && mypy
 
-test:
-	mkdir -p src/app/static
-	cd src && ./manage.py compilemessages
+check-no-dead-fixtures:
 	cd src && pytest --dead-fixtures
+
+test:
 	cd src && pytest -x

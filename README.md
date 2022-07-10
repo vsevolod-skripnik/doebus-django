@@ -28,17 +28,11 @@ You definetely should consider this steps after installation:
 
 ## Installation
 
-```
-$ pip install --upgrade cookiecutter
-$ cookiecutter gh:vsevolod-skripnik/doebus-django
-```
+1. [Install Poetry.](https://python-poetry.org/docs/#installation)
 
-## FAQ
+2. [Install Cookiecutter.](https://cookiecutter.readthedocs.io/en/stable/installation.html)
 
-### I have got an error «'random_ascii_string' is undefined»
-
-You should upgrade cookiecutter to the latest version: `pip install --upgrade cookiecutter`
-
-### I wanna hack this!
-
-Thank you so much! Check out our [CI pipeline](https://github.com/fandsdev/django/blob/master/.circleci/config.yml#L10) and pick any free [issue](https://github.com/fandsdev/django/issues).
+3. Run the following command:
+  ```
+  $ cookiecutter gh:vsevolod-skripnik/doebus-django
+  ```

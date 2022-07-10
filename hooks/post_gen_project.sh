@@ -1,30 +1,12 @@
 #!/bin/bash -e
 
-echo -ne "Running with "
+poetry env use python
+venv=`poetry env info -p`
+source ${venv}/bin/activate
 
-python --version
-
-echo Creating and populating virtualenv..
-
-python -m venv venv
-. venv/bin/activate
-
-pip install --upgrade pip pip-tools wheel
-make
-
-cd src
-
-echo Collecting static assets...
-./manage.py collectstatic
-
-echo Running initial migrations...
-./manage.py migrate
-
-cd ../
-echo Running flake8..
+make install
+make collectstatic
+make migrate
 make lint
-
-echo Running pytest...
+make check-no-dead-fixtures
 make test
-
-echo Done
