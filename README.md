@@ -8,6 +8,9 @@ I use this repository as a starter modern API Django template in my projects. Th
 * [Isort](https://pycqa.github.io/isort/) (`.isort.cfg`) to sort import statements
 * [Django Rest Framework](https://www.django-rest-framework.org/) with JWT support
 * [Poetry](https://python-poetry.org) (`pyproject.toml`) to manage dependencies
+* Multiple settings sections using [django-split-settings](https://github.com/wemake-services/django-split-settings)
+* Checking for stale fixtures with [pytest-dead-fixtures](https://github.com/jllorencetti/pytest-deadfixtures)
+* A tool that makes custom migration names mandatory (`app.management.commands.makemigrations`)
 
 ## How to install
 
