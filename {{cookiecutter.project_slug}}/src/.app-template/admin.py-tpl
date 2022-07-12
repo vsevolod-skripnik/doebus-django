@@ -1,0 +1,35 @@
+from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
+
+from {{ app_name }}.models import {{ model }}
+from app.base.admin import BaseModelAdmin
+
+
+@admin.register({{ model }})
+class {{ model }}Admin(BaseModelAdmin):
+    fieldsets = (
+        (
+            _('Names'),
+            {
+                'fields': (
+                ),
+            },
+        ),
+    )
+
+    readonly_fields = []
+    autocomplete_fields = []
+
+    list_display = [
+        'id',
+        '__str__',
+    ]
+    list_display_links = [
+        'id',
+        '__str__',
+    ]
+
+    list_filter = []
+    search_fields = []
+
+    ordering = ['-id']

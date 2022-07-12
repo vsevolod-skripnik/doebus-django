@@ -8,6 +8,8 @@ app_name = 'api_v1'
 urlpatterns = [
     path('auth/', include('a12n.urls')),
     path('users/', include('users.urls')),
+    path('products/', include('products.urls')),
+    path('orders/', include('orders.urls')),
     path('healthchecks/', include('django_healthchecks.urls')),
     path('docs/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('docs/swagger/', SpectacularSwaggerView.as_view(url_name='schema')),

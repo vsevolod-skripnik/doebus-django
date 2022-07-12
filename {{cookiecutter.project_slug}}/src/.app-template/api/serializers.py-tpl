@@ -1,0 +1,11 @@
+from rest_framework import serializers
+
+from {{ app_name }}.models import {{ model }}
+
+
+class {{ model }}Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = {{ model }}
+        fields = [
+            'id',
+        ]

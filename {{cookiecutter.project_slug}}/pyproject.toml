@@ -8,7 +8,6 @@ authors = []
 python = "^3.8"
 Django = "<3.3"
 bcrypt = "^3.2.2"
-django-behaviors = "^0.5.1"
 django-environ = "^0.9.0"
 django-ipware = "^4.0.2"
 django-axes = "^5.35.0"

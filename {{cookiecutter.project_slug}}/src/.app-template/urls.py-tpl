@@ -6,6 +6,7 @@ from django.urls import path
 from {{ app_name }}.api import viewsets
 
 router = SimpleRouter()
+router.register('', viewsets.{{ model }}ViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

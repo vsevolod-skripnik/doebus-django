@@ -18,7 +18,7 @@ REST_FRAMEWORK = {
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ],
     'DEFAULT_RENDERER_CLASSES': [
-        'app.api.renderers.AppJSONRenderer',
+        'app.base.api.renderers.BaseJSONRenderer',
     ],
     'DEFAULT_PARSER_CLASSES': [
         'djangorestframework_camel_case.parser.CamelCaseJSONParser',
@@ -26,7 +26,7 @@ REST_FRAMEWORK = {
         'djangorestframework_camel_case.parser.CamelCaseFormParser',
     ],
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
-    'DEFAULT_PAGINATION_CLASS': 'app.api.pagination.AppPagination',
+    'DEFAULT_PAGINATION_CLASS': 'app.base.api.pagination.BasePagination',
     'PAGE_SIZE': env('PAGE_SIZE', cast=int, default=20),
     'DEFAULT_THROTTLE_RATES': {
         'anon-auth': '10/min',

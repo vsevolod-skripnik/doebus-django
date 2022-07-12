@@ -1,0 +1,12 @@
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
+from app.api.viewsets import DefaultModelViewSet
+from {{ app_name }}.api import serializers
+from {{ app_name }}.models import {{ model }}
+
+
+class {{ model }}ViewSet(DefaultModelViewSet):
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    serializer_class = serializers.{{ model }}Serializer
+    queryset = {{ model }}.objects.all()
+    serializer_action_classes = {}
