@@ -18,6 +18,7 @@ include(
     'conf/apps.py',
     'conf/auth.py',
     'conf/boilerplate.py',
+    'conf/celery.py',
     'conf/db.py',
     'conf/healthchecks.py',
     'conf/http.py',

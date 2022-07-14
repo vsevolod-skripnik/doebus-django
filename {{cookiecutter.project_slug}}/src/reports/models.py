@@ -8,3 +8,6 @@ class Report(BaseModel):
         default='CREATED',
         max_length=255,
     )
+    data = models.JSONField(
+        default=dict,
+    )

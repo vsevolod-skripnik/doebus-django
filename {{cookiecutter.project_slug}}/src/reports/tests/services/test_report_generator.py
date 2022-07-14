@@ -1,6 +1,7 @@
 from decimal import Decimal
 import pytest
 
+from reports.models import Report
 from reports.services import ReportGenerator
 
 pytestmark = [pytest.mark.django_db]
@@ -35,8 +36,8 @@ def test_report_generator_get_report_data(product, order_item, report):
 
     assert report_data == {
         product.id: {
-            'income': Decimal('10000.00'),
-            'revenue': Decimal('24999.9'),
+            'income': 10000.00,
+            'revenue': 24999.9,
             'sold_count': 10,
         },
     }
@@ -47,7 +48,7 @@ def test_report_generator_set_report_data(report):
 
     report_generator.set_report_data({'foo': 'bar'})
 
-    report.refresh_from_db()
+    report = Report.objects.get(id=report.id)
     assert report.data == {'foo': 'bar'}
 
 
@@ -58,8 +59,8 @@ def test_report_generator(product, order_item, report):
 
     assert report.data == {
         product.id: {
-            'income': Decimal('10000.00'),
-            'revenue': Decimal('24999.9'),
+            'income': 10000.00,
+            'revenue': 24999.9,
             'sold_count': 10,
         },
     }

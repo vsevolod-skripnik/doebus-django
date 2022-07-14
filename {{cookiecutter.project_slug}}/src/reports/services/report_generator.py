@@ -24,8 +24,8 @@ class ReportGenerator(BaseService):
     def get_report_data(self, products):
         return {
             product.id: {
-                'income': product.income,
-                'revenue': product.revenue,
+                'income': float(product.income),
+                'revenue': float(product.revenue),
                 'sold_count': product.sold_count,
             }
             for product in products
