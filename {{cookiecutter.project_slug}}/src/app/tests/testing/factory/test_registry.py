@@ -1,7 +1,7 @@
 import pytest
 
-from app.testing.factory import FixtureRegistry
-from app.testing.factory import register
+from app.base.testing.factory import FixtureRegistry
+from app.base.testing.factory import register
 
 
 @pytest.fixture

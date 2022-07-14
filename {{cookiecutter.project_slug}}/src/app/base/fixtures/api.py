@@ -1,6 +1,6 @@
 import pytest
 
-from app.testing import ApiClient
+from app.base.testing import ApiClient
 from users.models import User
 
 

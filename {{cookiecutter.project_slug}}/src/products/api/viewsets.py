@@ -10,6 +10,7 @@ class ProductViewSet(BaseModelViewSet):
     serializer_class = serializers.ProductSerializer
     queryset = Product.objects.all()
     serializer_action_classes = {
+        'create': serializers.ProductCreateSerializer,
         'update': serializers.ProductUpdateSerializer,
         'partial_update': serializers.ProductUpdateSerializer,
     }

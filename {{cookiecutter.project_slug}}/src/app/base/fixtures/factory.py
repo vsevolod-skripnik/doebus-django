@@ -1,6 +1,6 @@
 import pytest
 
-from app.testing.factory import FixtureFactory
+from app.base.testing.factory import FixtureFactory
 
 
 @pytest.fixture

@@ -2,7 +2,7 @@ from typing import List
 
 from django.db import connection
 
-from app.services import BaseService
+from app.base.services import BaseService
 
 
 class HavingGrouper(BaseService):

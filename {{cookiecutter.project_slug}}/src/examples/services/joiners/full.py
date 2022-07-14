@@ -1,6 +1,6 @@
 from django.db.models.query import RawQuerySet
 
-from app.services import BaseService
+from app.base.services import BaseService
 from examples.models import Pet
 
 

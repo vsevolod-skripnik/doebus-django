@@ -2,7 +2,7 @@ import pytest
 
 from django.apps import apps
 
-from app.testing.api import ApiClient
+from app.base.testing.api import ApiClient
 
 pytestmark = [pytest.mark.django_db]
 

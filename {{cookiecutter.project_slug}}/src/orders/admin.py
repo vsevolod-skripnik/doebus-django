@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.utils.translation import gettext_lazy as _
 
 from app.base.admin import BaseModelAdmin
 from orders.models import Order
@@ -7,15 +6,9 @@ from orders.models import Order
 
 @admin.register(Order)
 class OrderAdmin(BaseModelAdmin):
-    fieldsets = (
-        (
-            _('Names'),
-            {
-                'fields': (
-                ),
-            },
-        ),
-    )
+    fields = [
+        'status',
+    ]
 
     readonly_fields = []
     autocomplete_fields = []

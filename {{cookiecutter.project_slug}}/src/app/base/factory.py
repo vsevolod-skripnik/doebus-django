@@ -4,8 +4,8 @@ from PIL import Image
 
 from django.core.files.uploadedfile import SimpleUploadedFile
 
-from app.testing import register
-from app.testing.types import FactoryProtocol
+from app.base.testing import register
+from app.base.testing.types import FactoryProtocol
 
 
 @register

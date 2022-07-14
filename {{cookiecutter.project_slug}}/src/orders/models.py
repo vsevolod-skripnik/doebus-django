@@ -3,8 +3,19 @@ from django.db import models
 from app.base.models import BaseModel
 
 
-class Order(BaseModel):
-    products = models.ManyToManyField(
+class OrderItem(BaseModel):
+    order = models.ForeignKey(
+        'Order',
+        on_delete=models.CASCADE,
+    )
+    product = models.ForeignKey(
         'products.Product',
-        related_name='orders',
+        on_delete=models.CASCADE,
+    )
+
+
+class Order(BaseModel):
+    status = models.CharField(
+        max_length=255,
+        default='CREATED',
     )

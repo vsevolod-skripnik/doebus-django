@@ -1,9 +1,9 @@
 from django.db import models
 
-from app.models import DefaultModel
+from app.base.models import BaseModel
 
 
-class Pet(DefaultModel):
+class Pet(BaseModel):
     name = models.CharField(max_length=255)
 
     owner = models.ForeignKey(
