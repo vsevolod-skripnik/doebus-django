@@ -1,0 +1,10 @@
+from typing import Dict
+
+from app.base.testing import register
+from app.base.testing.types import FactoryProtocol
+from {{ app_name }}.models import {{ model }}
+
+
+@register
+def {{ model|lower }}(self: FactoryProtocol, **kwargs: Dict) -> {{ model }}:
+    return self.mixer.blend('{{ app_name }}.{{ model }}', **kwargs)

@@ -9,4 +9,8 @@ class {{ model }}ViewSet(DefaultModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = serializers.{{ model }}Serializer
     queryset = {{ model }}.objects.order_by('-id')
-    serializer_action_classes = {}
+    serializer_action_classes = {
+        'create': serializers.{{ model }}CreateSerializer,
+        'update': serializers.{{ model }}UpdateSerializer,
+        'partial_update': serializers.{{ model }}UpdateSerializer,
+    }

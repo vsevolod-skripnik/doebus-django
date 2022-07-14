@@ -1,0 +1,8 @@
+import pytest
+
+from {{ app_name }}.models import {{ model }}
+
+
+@pytest.fixture
+def {{ model|lower }}(factory) -> {{ model }}:
+    return factory.{{ model|lower }}()
