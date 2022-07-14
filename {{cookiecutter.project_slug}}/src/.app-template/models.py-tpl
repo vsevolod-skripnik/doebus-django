@@ -4,4 +4,4 @@ from app.base.models import BaseModel
 
 
 class {{ model }}(BaseModel):
-    pass
+    title = models.CharField(max_length=255)

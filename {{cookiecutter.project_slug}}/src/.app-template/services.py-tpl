@@ -1,0 +1,10 @@
+from app.base.services import BaseService
+from {{ app_name }}.models import {{ model }}
+
+
+class {{ model }}Creator(BaseService):
+    def __init__(self):
+        ...
+
+    def act(self):
+        ...

@@ -10,6 +10,7 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('products/', include('products.urls')),
     path('orders/', include('orders.urls')),
+    path('reports/', include('reports.urls')),
     path('healthchecks/', include('django_healthchecks.urls')),
     path('docs/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('docs/swagger/', SpectacularSwaggerView.as_view(url_name='schema')),

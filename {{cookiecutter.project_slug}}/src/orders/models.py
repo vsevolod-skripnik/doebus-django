@@ -15,6 +15,14 @@ class OrderItem(BaseModel):
         related_name='order_items',
     )
 
+    cost = models.DecimalField(
+        decimal_places=2,
+        max_digits=10,
+    )
+    price = models.DecimalField(
+        decimal_places=2,
+        max_digits=10,
+    )
     amount = models.PositiveIntegerField()
 
 

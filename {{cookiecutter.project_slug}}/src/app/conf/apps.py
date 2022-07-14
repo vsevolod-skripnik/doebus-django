@@ -5,6 +5,7 @@ LOCAL_APPS = [
     'examples',
     'products',
     'orders',
+    'reports',
 ]
 
 THIRD_PARTY_APPS = [

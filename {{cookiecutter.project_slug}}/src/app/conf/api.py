@@ -32,6 +32,7 @@ REST_FRAMEWORK = {
         'anon-auth': '10/min',
     },
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'COERCE_DECIMAL_TO_STRING': False,
 }
 
 # Adding session auth and browsable API at the developer machine

@@ -1,6 +1,6 @@
-from django.db import transaction
-from django.db.models import F
 from rest_framework.exceptions import ValidationError
+
+from django.db import transaction
 
 from app.base.services import BaseService
 from products.models import Product
@@ -26,7 +26,6 @@ class OrderBuyer(BaseService):
             if product.count < order_item.amount:
                 raise ValidationError()
 
-    @transaction.atomic
     def act(self):
         self.subtract_product_count()
         self.set_order_status()
@@ -41,3 +40,7 @@ class OrderBuyer(BaseService):
 
     def set_order_status(self):
         self.order.status = 'BOUGHT'
+
+    @transaction.atomic
+    def __call__(self):
+        return super().__call__()
