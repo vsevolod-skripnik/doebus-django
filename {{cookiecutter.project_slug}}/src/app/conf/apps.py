@@ -3,6 +3,8 @@ LOCAL_APPS = [
     'a12n',
     'users',
     'examples',
+    'products',
+    'orders',
 ]
 
 THIRD_PARTY_APPS = [

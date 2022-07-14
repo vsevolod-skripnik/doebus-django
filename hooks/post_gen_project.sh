@@ -7,6 +7,7 @@ source ${venv}/bin/activate
 make install
 make collectstatic
 make migrate
-make lint
+make lint-ci
+make lint-python
 make check-no-dead-fixtures
 make test

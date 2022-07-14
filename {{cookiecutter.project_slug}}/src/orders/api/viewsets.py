@@ -10,7 +10,7 @@ from orders.services import OrderBuyer
 class OrderViewSet(BaseModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly]
     serializer_class = serializers.OrderSerializer
-    queryset = Order.objects.all()
+    queryset = Order.objects.order_by('-id')
     serializer_action_classes = {
         'create': serializers.OrderCreateSerializer,
     }
